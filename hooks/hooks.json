@@ -1,0 +1,11 @@
+{
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "command": "node ./bin/cursor-scope-guard.mjs",
+        "matcher": "nmap|masscan|nuclei|httpx|subfinder|dnsx|naabu|ffuf|feroxbuster|gobuster|fscan|gogo|sqlmap|ncat|chisel|frpc|frps|suo5|curl|wget|ssh|scp|impacket",
+        "timeout": 20
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+---
+description: Authorized red-team engagement policy. Apply when the user asks for red-team work, recon, vulnerability scanning, exploitation, internal movement, or invokes /redteam.
+alwaysApply: false
+---
+
+# Red-team authorization policy
+
+- Only operate on targets inside the active engagement's `scope.json` (CIDR + domains).
+- Start every engagement with `redteam_engagement_open` (name, scope, domains, authorization_ref, expires_at, high_risk).
+- No scope means no network traffic. Stop and ask the user to update the scope.
+- High-risk actions (exploitation, webshell upload, tunnels, internal movement) require `high_risk=true` and explicit user confirmation.
+- Do not run DoS, mass brute force, out-of-scope scanning, persistence beyond the engagement, or data exfiltration beyond proof.
+- Record every finding in the redteam store (`redteam_asset_add`, `redteam_vuln_add`, `redteam_http_evidence_add`, `redteam_chain_add`, `redteam_score_hit`).
+- Network tools run through Cursor's shell; the `beforeShellExecution` hook enforces the target allowlist.

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "redteam": {
+      "command": "node",
+      "args": [
+        "${CURSOR_PLUGIN_ROOT}/runtime/server.mjs"
+      ],
+      "timeout": 120000
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "cursor-purge",
+  "displayName": "Cursor Purge · Red Team",
+  "version": "1.0.0",
+  "description": "Authorized red-team engagement lab for Cursor. Bridges to a locally installed, licensed dsh-purge redteam store (assets, vulns, evidence, credentials, webshells, tunnels, scores, POC knowledge base), ships original Cursor subagents and skills, and enforces an engagement scope gate on shell execution. No dsh-purge source code or prompts are bundled.",
+  "author": {
+    "name": "ikunvx"
+  },
+  "license": "MIT",
+  "keywords": [
+    "cursor",
+    "red-team",
+    "security",
+    "penetration-testing",
+    "recon",
+    "nuclei",
+    "asset-management",
+    "dsh-purge"
+  ]
+}
